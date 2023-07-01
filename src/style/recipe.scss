@@ -1,0 +1,59 @@
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.recipe {
+  padding: 20px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid black;
+}
+
+.recipe:last-child {
+  border-bottom: none;
+  padding-bottom: 10px;
+}
+
+.recipe__header {
+  @include flexCenter;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.recipe__title {
+  margin: 0;
+  font-size: 1.75rem;
+}
+
+.recipe__row {
+  margin-top: 10px;
+}
+
+.recipe__label {
+  margin-right: 5px;
+}
+
+.recipe__value {
+  font-size: 300;
+}
+
+.recipe__instructions {
+  display: flex;
+  flex-direction: column;
+}
+
+.recipe__ingredients {
+  margin-left: 10px;
+  margin-top: 10px;
+  
+}
+
+.ingredient-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  row-gap: 5px;
+  column-gap: 10px;
+  justify-content: flex-start;
+}
